@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Musa Realty | Patrícia Musa, imóveis em Miami e Orlando</title>
+<meta name="description" content="Consultoria pessoal da Patrícia Musa, Founder & Broker da Musa Realty, para famílias brasileiras que querem morar ou investir em Miami e Orlando.">
+<meta property="og:title" content="Musa Realty | Patrícia Musa">
+<meta property="og:description" content="Dolarize seu patrimônio e viva em Miami ou Orlando, com acompanhamento pessoal do primeiro contato à entrega das chaves.">
+<meta property="og:image" content="assets/final-cta.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#294634; --verde-escuro:#1e3527; --ouro:#b78c4e; --ouro-claro:#d6b66e;
+  --creme:#f8f5f0; --off:#fafaf8; --texto:#2b2f2c; --cinza:#6b6f6c; --branco:#fff;
+  --serif:"Cormorant Garamond","Playfair Display",Georgia,serif;
+  --sans:Montserrat,system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--texto);background:var(--off);line-height:1.6;font-weight:400}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--ouro);font-weight:500}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12}
+h2{font-size:clamp(32px,4.2vw,48px);color:var(--verde)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:2px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;text-decoration:none;border:0;cursor:pointer;transition:.25s}
+.btn-ouro{background:var(--ouro);color:var(--branco)}.btn-ouro:hover{background:#a37a40}
+.btn-verde{background:var(--verde);color:var(--branco)}.btn-verde:hover{background:var(--verde-escuro)}
+.btn-linha{border:1px solid var(--ouro);color:var(--ouro);background:transparent}.btn-linha:hover{background:var(--ouro);color:#fff}
+
+/* topo */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+header.solido{background:rgba(30,53,39,.96);box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.nav img{height:40px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:13px;color:#e9e4da}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--ouro-claro)}
+.nav .btn{padding:12px 20px;font-size:11px}
+@media(max-width:900px){.nav ul{display:none}.nav img{height:32px}}
+
+/* faixa de evento */
+.evento{display:none;background:var(--ouro);color:#fff;text-align:center;font-size:14px;padding:12px 20px;position:relative;z-index:60}
+.evento b{font-weight:600}
+body.tem-evento header{top:auto;position:sticky}
+body.tem-evento .hero{margin-top:-84px}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;text-align:center}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,53,39,.78),rgba(30,53,39,.70) 60%,rgba(30,53,39,.92))}
+.hero .wrap{position:relative;z-index:2;padding-top:110px;padding-bottom:80px}
+.hero h1{font-size:clamp(42px,6.4vw,80px);color:var(--ouro-claro);margin:22px auto 26px;max-width:900px}
+.hero p{max-width:640px;margin:0 auto 14px;color:#e9e4da;font-size:16px;font-weight:300}
+.hero .slogan{font-family:var(--serif);font-style:italic;font-size:22px;color:#fff;margin:4px 0 30px}
+.hero .nota{margin-top:22px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#cfc6b4;border:1px solid rgba(214,182,110,.35);display:inline-block;padding:8px 16px}
+
+/* credenciais */
+.cred{position:relative;z-index:5;margin-top:-70px}
+.cred .caixa{background:var(--creme);border:1px solid #e6dccb;display:grid;grid-template-columns:repeat(5,1fr);box-shadow:0 20px 50px rgba(0,0,0,.12)}
+.cred .item{padding:28px 18px;text-align:center;font-size:13px;color:var(--verde);border-right:1px solid #e6dccb}
+.cred .item:last-child{border:0}
+.cred .item b{display:block;font-family:var(--serif);font-size:28px;color:var(--ouro);font-weight:600;margin-bottom:4px}
+@media(max-width:900px){.cred .caixa{grid-template-columns:1fr 1fr}.cred .item{border-bottom:1px solid #e6dccb}}
+
+section{padding:110px 0}
+.verde{background:var(--verde);color:#efe9dd}
+.verde h2{color:var(--ouro-claro)}
+.creme{background:var(--creme)}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+@media(max-width:900px){.duas{grid-template-columns:1fr;gap:40px}section{padding:80px 0}}
+.linha-ouro{width:60px;height:2px;background:var(--ouro);margin:0 0 26px}
+
+/* qualificação */
+.escolha{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.escolha button{padding:22px;text-align:left;font-family:var(--sans);font-size:15px;cursor:pointer;border:1px solid var(--ouro);background:transparent;color:#efe9dd;transition:.25s;display:flex;justify-content:space-between;align-items:center}
+.escolha button:first-child{background:var(--ouro);color:#fff}
+.escolha button:hover{background:var(--ouro);color:#fff}
+.foto-arco{border-radius:300px 300px 0 0;overflow:hidden;aspect-ratio:4/5}
+.foto-arco img{width:100%;height:100%;object-fit:cover}
+
+/* bio */
+.bio-foto{position:relative}
+.bio-foto img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.bio-foto:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--ouro);z-index:-1}
+.bio p{margin-bottom:16px;color:#444}
+
+/* como funciona */
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:50px}
+.card{background:#fff;padding:34px 28px;border-top:2px solid var(--ouro)}
+.card h3{font-size:26px;color:var(--verde);margin-bottom:12px}
+.card p{font-size:14px;color:var(--cinza)}
+@media(max-width:900px){.cards4{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cards4{grid-template-columns:1fr}}
+
+/* veja */
+.veja{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.veja img{box-shadow:0 20px 50px rgba(0,0,0,.25)}
+@media(max-width:900px){.veja{grid-template-columns:1fr}}
+
+/* lançamentos */
+.grupo{margin-top:60px}
+.grupo h3{font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro);font-weight:600;margin-bottom:24px}
+.projetos{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.proj{background:#fff;display:flex;flex-direction:column}
+.proj img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.proj .c{padding:24px;display:flex;flex-direction:column;flex:1}
+.proj h4{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--verde)}
+.proj .end{font-size:12px;color:var(--cinza);margin:2px 0 12px}
+.proj p{font-size:14px;color:#555;flex:1}
+.proj .preco{font-family:var(--serif);font-size:22px;color:var(--ouro);margin:16px 0}
+.proj a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);font-weight:600;text-decoration:none;border-bottom:1px solid var(--ouro);align-self:flex-start;padding-bottom:3px;cursor:pointer}
+.orlando{background:var(--verde);color:#efe9dd;padding:40px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center}
+.orlando h4{font-family:var(--serif);font-size:34px;color:var(--ouro-claro);font-weight:500;margin-bottom:10px}
+@media(max-width:900px){.projetos{grid-template-columns:1fr 1fr}.orlando{grid-template-columns:1fr}}
+@media(max-width:560px){.projetos{grid-template-columns:1fr}}
+
+/* depoimentos */
+.deps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+.dep{background:#fff;padding:34px;position:relative}
+.dep:before{content:"\201C";font-family:var(--serif);font-size:80px;color:var(--ouro);line-height:.6;display:block;height:34px}
+.dep p{font-size:14px;color:#555;margin-bottom:18px}
+.dep b{font-family:var(--serif);font-size:20px;color:var(--verde);font-weight:600}
+@media(max-width:900px){.deps{grid-template-columns:1fr}}
+
+/* formulário */
+.cta{position:relative;color:#fff;background:url(assets/final-cta.jpg) center/cover}
+.cta:before{content:"";position:absolute;inset:0;background:rgba(30,53,39,.88)}
+.cta .wrap{position:relative}
+.cta h2{color:var(--ouro-claro)}
+form{background:rgba(255,255,255,.06);border:1px solid rgba(214,182,110,.35);padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .full{grid-column:1/-1}
+label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#d8cfbd;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;background:rgba(255,255,255,.95);border:0;font-family:var(--sans);font-size:15px;color:var(--texto);border-radius:2px}
+textarea{min-height:80px;resize:vertical}
+.priv{font-size:12px;color:#cfc6b4}
+.ok{display:none;text-align:center;padding:30px;border:1px solid var(--ouro)}
+@media(max-width:700px){form{grid-template-columns:1fr;padding:24px}}
+
+footer{background:var(--verde-escuro);color:#cfc6b4;padding:60px 0 40px;font-size:14px}
+footer .f{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+footer img{height:44px;margin-bottom:16px}
+footer .slogan{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ouro-claro)}
+footer small{display:block;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:#93a096}
+@media(max-width:800px){footer .f{grid-template-columns:1fr}}
+
+.wpp{position:fixed;right:22px;bottom:22px;z-index:70;width:58px;height:58px;border-radius:50%;background:#1f3a29;border:1px solid var(--ouro);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.wpp svg{width:28px;height:28px;fill:var(--ouro-claro)}
+</style>
+</head>
+<body>
+
+<div class="evento" id="faixaEvento"></div>
+
+<header id="topo">
+  <div class="wrap nav">
+    <a href="#inicio"><img src="assets/logo-musa-realty-white.png" alt="MUSA REALTY"></a>
+    <ul>
+      <li><a href="#patricia">Conheça a Patrícia</a></li>
+      <li><a href="#como">Como funciona</a></li>
+      <li><a href="#lancamentos">Lançamentos</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+    </ul>
+    <a class="btn btn-ouro" href="#contato">Fale com a Patrícia</a>
+  </div>
+</header>
+
+<section class="hero" id="inicio" style="padding:0">
+  <video autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video>
+  <div class="wrap">
+    <div class="kicker">MUSA REALTY · MIAMI &amp; ORLANDO</div>
+    <h1>Dolarize seu patrimônio e viva em Miami ou Orlando</h1>
+    <div class="slogan">Where Miami Inspires</div>
+    <p>A Flórida deixou de ser só um destino turístico. Para muitas famílias brasileiras, virou o lar onde os filhos crescem e onde uma nova história começa a ser escrita.</p>
+    <p>Há quase 30 anos morando em Miami, a Patrícia Musa conhece a Flórida como poucos e conduz cada família nessa decisão com calma e cuidado.</p>
+    <div style="margin-top:34px"><a class="btn btn-ouro" href="#contato">Quero conversar com a Patrícia</a></div>
+    <div class="nota">A Patrícia atende um número limitado de famílias a cada trimestre</div>
+  </div>
+</section>
+
+<div class="cred">
+  <div class="wrap">
+    <div class="caixa">
+      <div class="item"><b>2007</b>Corretora licenciada na Flórida desde 2007</div>
+      <div class="item"><b>Founder</b>Fundadora e broker da Musa Realty, em Miami e Orlando</div>
+      <div class="item"><b>+200</b>projetos com relacionamento direto com incorporadoras</div>
+      <div class="item"><b>40 a 50</b>famílias em acompanhamento contínuo</div>
+      <div class="item"><b>Veja</b>Reconhecida na mídia como referência para brasileiros</div>
+    </div>
+  </div>
+</div>
+
+<section class="verde">
+  <div class="wrap duas">
+    <div>
+      <div class="linha-ouro"></div>
+      <h2>Uma consultoria para quem já decidiu ter um imóvel na Flórida e busca acompanhamento pessoal.</h2>
+      <p style="margin-top:22px">Os projetos apresentados aqui começam a partir de US$ 400 mil, em Miami e em Orlando.</p>
+      <p style="margin-top:12px">Se você já tem essa faixa de investimento em mente, nos diga: você está buscando um imóvel para morar ou para investir e gerar renda em dólar?</p>
+      <div class="escolha">
+        <button type="button" data-interesse="Morar na Flórida">Morar na Flórida <span>→</span></button>
+        <button type="button" data-interesse="Investir e gerar renda em dólar">Investir e gerar renda em dólar <span>→</span></button>
+      </div>
+    </div>
+    <div class="foto-arco"><img src="assets/qualification.jpg" alt="Interior de imóvel de alto padrão em Miami com vista para o mar" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="patricia">
+  <div class="wrap duas bio">
+    <div class="bio-foto"><img src="assets/patricia-bio.jpg" alt="Patrícia Musa, Founder & Broker da Musa Realty" loading="lazy"></div>
+    <div>
+      <div class="kicker">Founder &amp; Broker</div>
+      <h2 style="margin:14px 0 24px">Conheça a Patrícia Musa, corretora licenciada na Flórida desde 2007 e fundadora da Musa Realty.</h2>
+      <p>Nascida em São Paulo, ela vive em Miami há quase três décadas. Nesse tempo, ajudou famílias, investidores e empresários brasileiros a transformar decisões em patrimônio real nos Estados Unidos.</p>
+      <p>Conhece de dentro o mercado de Miami-Dade, Broward e Orlando, e usa esse conhecimento para conduzir cada cliente com segurança, do primeiro contato à entrega das chaves.</p>
+      <p>Grande parte dos clientes da Musa Realty começa o processo ainda no Brasil. Analisamos as oportunidades, explicamos cada documento e acompanhamos cada etapa pessoalmente.</p>
+      <a class="btn btn-verde" href="#contato" style="margin-top:10px">Falar com a Patrícia</a>
+    </div>
+  </div>
+</section>
+
+<section class="creme" id="como">
+  <div class="wrap">
+    <div class="kicker">Como funciona</div>
+    <h2 style="margin-top:14px;max-width:760px">Uma consultoria pessoal, do primeiro contato à entrega das chaves.</h2>
+    <div class="cards4">
+      <div class="card"><h3>Consultoria personalizada</h3><p>Entendemos se você busca morar, investir ou os dois, antes de mostrar qualquer imóvel.</p></div>
+      <div class="card"><h3>Acesso ao mercado inteiro</h3><p>Com acesso direto ao MLS e aos principais incorporadores, você não fica restrito a um lançamento ou a uma única construtora.</p></div>
+      <div class="card"><h3>Suporte completo em português</h3><p>Contamos com parceiros especialistas em financiamento, jurídico e tributação, que cuidam de cada etapa junto com você.</p></div>
+      <div class="card"><h3>Concierge exclusivo</h3><p>Uma estrutura local inteira à sua disposição, para que ter um imóvel na Flórida seja simples de onde você estiver.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="verde">
+  <div class="wrap veja">
+    <img src="assets/veja.jpg" alt="Matéria da Revista Veja com Patrícia Musa sobre o mercado imobiliário de Miami" loading="lazy">
+    <div>
+      <div class="kicker">Revista Veja</div>
+      <h2 style="margin-top:14px">Reconhecida na mídia como referência no mercado imobiliário de Miami para brasileiros.</h2>
+    </div>
+  </div>
+</section>
+
+<section id="lancamentos">
+  <div class="wrap">
+    <div class="kicker">Lançamentos em destaque</div>
+    <h2 style="margin-top:14px">Alguns dos projetos que acompanhamos em Miami e Orlando.</h2>
+
+    <div class="grupo"><h3>Para quem busca uso próprio e privacidade</h3><div class="projetos" id="g1"></div></div>
+    <div class="grupo"><h3>Para quem busca investimento com flexibilidade</h3><div class="projetos" id="g2"></div></div>
+    <div class="grupo"><h3>Marca e lifestyle internacional</h3><div class="projetos" id="g3"></div></div>
+
+    <div class="grupo">
+      <h3>Orlando</h3>
+      <div class="orlando">
+        <div>
+          <h4>Orlando, a porta de entrada na Flórida</h4>
+          <p>Casas e condomínios em resorts próximos aos parques, com gestão de locação por temporada, como o Solara. Para quem quer começar a dolarizar o patrimônio com um investimento mais acessível e renda em dólar.</p>
+        </div>
+        <div style="text-align:right"><a class="btn btn-linha" data-proj="Orlando" href="#contato">Quero a seleção de Orlando</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="creme" id="depoimentos">
+  <div class="wrap">
+    <div class="kicker">Depoimentos</div>
+    <h2 style="margin-top:14px">A experiência de quem já viveu essa jornada.</h2>
+    <div class="deps">
+      <div class="dep"><p>Uma profissional excepcional que auxilia em todas as etapas de aquisição de um imóvel. Procurei a Patrícia quando estava buscando um apartamento em Miami. Ela me atendeu prontamente com as melhores opções na região de Brickell, que era onde eu buscava. Super recomendo.</p><b>Germaá Oliveira</b></div>
+      <div class="dep"><p>Já é a segunda vez que contamos com a assistência da Patrícia Musa e estamos extremamente satisfeitos. Ela conhece todos os detalhes dos negócios sob seus cuidados, é muito organizada, articulada e rápida para responder qualquer dúvida.</p><b>Luciana C.</b></div>
+      <div class="dep"><p>Patricia and her team are exceptional at what they do! From the very start, Patricia made the process of purchasing our home in Miami a great experience. We wouldn't have purchased our dream home if it weren't for Patricia.</p><b>Livia Michelucci Monteiro</b></div>
+      <div class="dep"><p>Patrícia, muito obrigado pela sua disponibilidade e dedicação. Espero poder contar com você e trabalharmos juntos mais vezes.</p><b>Gabriel, Tabatha e Olívia</b></div>
+      <div class="dep"><p>Atendimento personalizado e profissional. Parabéns à equipe Musa.</p><b>Valeria T.</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <div class="wrap duas">
+    <div>
+      <div class="kicker">Comece agora</div>
+      <h2 style="margin:14px 0 22px">Toda decisão importante começa com uma conversa.</h2>
+      <p style="color:#e9e4da">A Patrícia reserva um número limitado de horários por semana para conversas iniciais, e cada família recebe atendimento personalizado.</p>
+      <p style="color:#e9e4da;margin-top:12px">Deixe seus dados e a nossa equipe entra em contato pelo WhatsApp, já com as informações certas para a sua conversa.</p>
+    </div>
+    <div>
+      <form id="form" novalidate>
+        <div class="full"><label for="nome">Nome completo</label><input id="nome" name="nome" required autocomplete="name"></div>
+        <div><label for="whats">WhatsApp</label><input id="whats" name="whatsapp" required inputmode="tel" placeholder="+55 19 99999-9999" autocomplete="tel"></div>
+        <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="cidade">Cidade onde mora</label><input id="cidade" name="cidade" autocomplete="address-level2"></div>
+        <div><label for="interesse">Interesse</label>
+          <select id="interesse" name="interesse"><option>Morar na Flórida</option><option>Investir e gerar renda em dólar</option><option>Os dois</option></select></div>
+        <div><label for="regiao">Região</label>
+          <select id="regiao" name="regiao"><option>Miami</option><option>Orlando</option><option>Miami e Orlando</option><option>Ainda não sei</option></select></div>
+        <div><label for="faixa">Faixa de investimento</label>
+          <select id="faixa" name="faixa"><option>Até US$ 500 mil</option><option>De US$ 500 mil a 1 milhão</option><option>Acima de US$ 1 milhão</option><option>Prefiro conversar</option></select></div>
+        <div class="full"><label for="prazo">Quando pensa em decidir?</label>
+          <select id="prazo" name="prazo"><option>Nos próximos 6 meses</option><option>De 6 a 12 meses</option><option>Em mais de 12 meses</option></select></div>
+        <div class="full" id="campoEvento" style="display:none"><label for="evento">Encontro</label>
+          <select id="evento" name="evento"></select></div>
+        <div class="full"><label for="msg">Algo que a Patrícia deva saber? (opcional)</label><textarea id="msg" name="mensagem"></textarea></div>
+        <div class="full"><button class="btn btn-ouro" type="submit" style="width:100%;justify-content:center">Enviar e falar com a Patrícia</button></div>
+        <p class="full priv">Seus dados são usados só pela equipe da Musa Realty para o seu atendimento.</p>
+      </form>
+      <div class="ok" id="ok"><h3 style="color:var(--ouro-claro);font-size:30px">Obrigada!</h3><p style="margin-top:10px">Recebemos os seus dados. Estamos abrindo o WhatsApp da Patrícia para você.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f">
+    <div><img src="assets/logo-musa-realty-white.png" alt="MUSA REALTY"><div class="slogan">Where Miami Inspires</div></div>
+    <div>Patrícia Musa<br>Founder &amp; Broker, Musa Realty Co.<br>Corretora licenciada na Flórida desde 2007<br>Atendimento em português, inglês e espanhol</div>
+    <div>Instagram: <a href="https://instagram.com/patriciamusa.miami" target="_blank" rel="noopener">@patriciamusa.miami</a><br>WhatsApp: <a href="#" data-wpp>+1 (305) 351-6059</a><br>E-mail: <a href="mailto:patricia@patriciamusa.com">patricia@patriciamusa.com</a></div>
+  </div>
+  <div class="wrap"><small>© 2026 Musa Realty Company, Inc. · Miami &amp; Orlando · Licensed Real Estate Broker in Florida</small></div>
+</footer>
+
+<a class="wpp" href="#" data-wpp aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3Z"/></svg></a>
+
+<script>
+/* ===== CONFIGURAÇÃO ===== */
+var WHATSAPP = "13053516059";
+/* URL do Google Apps Script que grava na planilha (deixe vazio enquanto não estiver configurado) */
+var PLANILHA_URL = "";
+/* Encontros (ativados pelo link: ?evento=limeira ou ?evento=sp) */
+var EVENTOS = {
+  limeira: {nome:"The New Miami Experience em Limeira",
+    faixa:"<b>Convite:</b> The New Miami Experience em Limeira · segunda, 9 de novembro (brunch) e terça, 10 (atendimentos individuais) · participação gratuita, mediante confirmação",
+    opcoes:["Brunch, segunda 9 de novembro","Atendimento individual, terça 10 de novembro"]},
+  sp: {nome:"The New Miami Experience em São Paulo",
+    faixa:"<b>Convite:</b> The New Miami Experience em São Paulo · de 4 a 7 de novembro, das 10h às 19h · Artefacto Haddock Lobo · encontros com hora marcada",
+    opcoes:["Quarta, 4 de novembro","Quinta, 5 de novembro","Sexta, 6 de novembro","Sábado, 7 de novembro"]}
+};
+/* ===== PROJETOS (texto da página original da GoEx) ===== */
+var PROJ = {
+ g1:[["1428 Brickell","1428 Brickell Avenue, Brickell","Fachada solar integrada ao vidro, com mais de 500 painéis fotovoltaicos. Interiores criados e mobiliados artesanalmente na Itália, sob a curadoria de Antonio Citterio.","US$ 2,4M a 5,5M","p-1428.webp"],
+     ["Cipriani Residences","1420 South Miami Avenue, Brickell","O lendário serviço italiano da marca Cipriani, numa torre de vidro curvo inspirada nos iates clássicos da Riviera. Residências bespoke para um comprador exigente.","US$ 1,6M a 7M","p-cipriani.webp"],
+     ["Palma Miami Beach Residences","600 71st Street, Miami Beach","126 residências a poucos passos da praia, com certificação LEED Gold e mobília assinada pelo Studio Ramirez.","US$ 650 mil a 1,6M","p-palma.webp"],
+     ["House of Wellness Brickell","152 Southwest 9th Street, Brickell","Um ecossistema pensado para a saúde do morador, com purificação de água e ar em todo o edifício. Sauna, juice bar, coworking e rooftop com piscina.","US$ 380 mil a 800 mil","p-wellness.webp"]],
+ g2:[["Ora by Casa Tua","1210 Brickell Avenue, Brickell","A gastronomia e o serviço da Casa Tua dentro de casa. Locação de curto ou longo prazo e um parque interno de 40 pés de altura.","US$ 990 mil a 4M","p-ora.webp"],
+     ["Delano Residences","400 Biscayne Boulevard, Miami","Um dos endereços mais reconhecidos de Miami, com opções de locação flexível e unidades estritamente residenciais.","US$ 705 mil a 3,6M","p-delano.webp"],
+     ["14 ROC","125 Northeast 14th Street, Miami","Locação sem restrições, liberdade total para quem investe pensando em renda.","US$ 505 mil a 1,2M","p-14roc.webp"],
+     ["NoBe Parc Residences","7140 Abbott Avenue, Miami Beach","Unidades 100% mobiliadas, prontas para morar ou investir, a poucos passos da praia de North Beach.","US$ 555 mil a 1,1M","p-nobe.webp"],
+     ["Domus Brickell Park","1611 Southwest 2nd Avenue, Brickell","Formato condo-hotel, com gestão facilitada e estrutura pensada para quem investe de longe.","US$ 620 mil a 925 mil","p-domuspark.webp"],
+     ["Domus Brickell Center","1034 Southwest 2nd Avenue, Brickell","Sem restrição de locação, com gestão integrada da Domus Management para simplificar o dia a dia do proprietário.","US$ 500 mil a 1,2M","p-domuscenter.webp"]],
+ g3:[["619 Brickell by Nobu","619 Brickell Avenue, Miami","Arquitetura da Foster + Partners e o segundo restaurante Nobu de Miami dentro do edifício. Purificação de ar e iluminação circadiana em cada residência.","US$ 2,2M a 30M","p-nobu.webp"]]
+};
+for (var g in PROJ){ var el=document.getElementById(g); PROJ[g].forEach(function(p){
+  el.insertAdjacentHTML("beforeend",'<div class="proj"><img loading="lazy" src="assets/'+p[4]+'" alt="'+p[0]+'"><div class="c"><h4>'+p[0]+'</h4><div class="end">'+p[1]+'</div><p>'+p[2]+'</p><div class="preco">'+p[3]+'</div><a data-proj="'+p[0]+'" href="#contato">Quero saber mais</a></div></div>');});}
+
+/* origem do visitante (?origem=indicacao, ?origem=instagram, ?evento=limeira ...) */
+var q=new URLSearchParams(location.search);
+var origem=q.get("origem")||(q.get("evento")?"convite-"+q.get("evento"):"link-direto");
+var ev=EVENTOS[q.get("evento")];
+var projetoEscolhido="";
+if(ev){
+  var f=document.getElementById("faixaEvento"); f.innerHTML=ev.faixa; f.style.display="block"; document.body.classList.add("tem-evento");
+  var s=document.getElementById("evento"); ev.opcoes.forEach(function(o){s.insertAdjacentHTML("beforeend","<option>"+o+"</option>")});
+  document.getElementById("campoEvento").style.display="block";
+}
+document.querySelectorAll("[data-interesse]").forEach(function(b){b.onclick=function(){document.getElementById("interesse").value=b.dataset.interesse;location.hash="contato";}});
+document.querySelectorAll("[data-proj]").forEach(function(a){a.addEventListener("click",function(){projetoEscolhido=a.dataset.proj; if(projetoEscolhido==="Orlando")document.getElementById("regiao").value="Orlando"; var m=document.getElementById("msg"); if(!m.value)m.value="Tenho interesse em: "+projetoEscolhido;});});
+
+function wppLink(t){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t);}
+document.querySelectorAll("[data-wpp]").forEach(function(a){a.href=wppLink(ev?"Olá, Patrícia! Recebi o convite para o "+ev.nome+" e gostaria de saber mais.":"Olá, Patrícia! Recebi o link da Musa Realty e gostaria de saber mais.");a.target="_blank";a.rel="noopener";});
+
+window.addEventListener("scroll",function(){document.getElementById("topo").classList.toggle("solido",scrollY>40)});
+
+document.getElementById("form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var d=Object.fromEntries(new FormData(this).entries());
+  if(!d.nome||!d.whatsapp){alert("Por favor, preencha o nome e o WhatsApp.");return;}
+  d.origem=origem; d.projeto=projetoEscolhido; d.data=new Date().toISOString(); d.pagina=location.href;
+  if(PLANILHA_URL){ try{ fetch(PLANILHA_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(d)}); }catch(err){} }
+  var t="Olá, Patrícia! Sou "+d.nome+(d.cidade?", de "+d.cidade:"")+". "+(ev?"Recebi o convite para o "+ev.nome+(d.evento?" ("+d.evento+")":"")+". ":"Recebi o link da Musa Realty. ")+"Meu interesse: "+d.interesse+", em "+d.regiao+". Faixa: "+d.faixa+". Prazo: "+d.prazo+"."+(d.mensagem?" "+d.mensagem:"");
+  this.style.display="none"; document.getElementById("ok").style.display="block";
+  setTimeout(function(){location.href=wppLink(t);},900);
+});
+</script>
+</body>
+</html>
